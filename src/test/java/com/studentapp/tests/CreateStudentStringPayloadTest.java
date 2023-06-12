@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class CreateStudentPayloadTest extends TestBase {
+public class CreateStudentStringPayloadTest extends TestBase {
 
     @DisplayName("Create a new student by sending payload as String")
     @Test
@@ -17,7 +17,10 @@ public class CreateStudentPayloadTest extends TestBase {
                 when().
                 contentType(ContentType.JSON).
                 when().
-                body(payload).post().then().statusCode(201);
+                body(payload).
+                post().
+                then().
+                statusCode(201);
 
 
 
