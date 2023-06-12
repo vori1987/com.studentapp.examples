@@ -1,5 +1,6 @@
 package com.studentapp.tests;
 
+import com.github.javafaker.Faker;
 import com.studentapp.model.StudentPojo;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;
@@ -17,15 +18,16 @@ public class CreateStudentPojoPayloadTest extends TestBase {
     void createNewStudent() {
 
         StudentPojo student = new StudentPojo();
+        Faker fake = new Faker();
 
         List<String> courses = new ArrayList<>();
         courses.add("Java");
         courses.add("C++");
 
-        student.setFirstName("John");
-        student.setLastName("Doe");
-        student.setEmail("John@somemail.com");
-        student.setProgramme("CS");
+        student.setFirstName(fake.name().firstName());
+        student.setLastName(fake.name().lastName());
+        student.setEmail(fake.internet().emailAddress());
+        student.setProgramme("Computer Science");
         student.setCourses(courses);
 
         given().
@@ -36,6 +38,6 @@ public class CreateStudentPojoPayloadTest extends TestBase {
                 post().
                 then().
                 statusCode(201);
-
     }
+
 }
