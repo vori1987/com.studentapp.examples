@@ -1,4 +1,4 @@
-package com.studentapp.tests.softassert;
+package com.studentapp.tests.jsonassert;
 
 import com.studentapp.tests.TestBase;
 import org.junit.jupiter.api.DisplayName;
@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SoftAssertExample extends TestBase {
-    @DisplayName("Assertion in Students app")
+public class SoftHardAssertExample extends TestBase {
+    @DisplayName("Hard Assertion in Students app")
     @Test
     public void hardAsserts() {
         given().
@@ -22,6 +22,7 @@ public class SoftAssertExample extends TestBase {
                 statusCode(200);
     }
 
+    @DisplayName("Soft Assertion in Students app")
     @Test
     public void softAsserts() {
         given().
