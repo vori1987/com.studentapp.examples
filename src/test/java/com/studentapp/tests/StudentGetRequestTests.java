@@ -48,6 +48,7 @@ public class StudentGetRequestTests extends TestBase {
                 get("/list");
 
     }
+
     @Disabled
     @DisplayName("Get a CS student from the list")
     @Test
@@ -67,6 +68,7 @@ public class StudentGetRequestTests extends TestBase {
 
         response.prettyPrint();
     }
+
     @DisplayName("PathParameterExample: Get the firstStudent")
     @Test
     void getTheFirstStudent() {

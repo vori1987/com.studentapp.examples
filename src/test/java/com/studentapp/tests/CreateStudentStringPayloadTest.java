@@ -23,6 +23,5 @@ public class CreateStudentStringPayloadTest extends TestBase {
                 statusCode(201);
 
 
-
     }
 }

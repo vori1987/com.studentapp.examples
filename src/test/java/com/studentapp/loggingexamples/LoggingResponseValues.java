@@ -20,6 +20,7 @@ public class LoggingResponseValues extends TestBase {
                 headers().
                 statusCode(200);
     }
+
     @Test
     public void test002() {
         System.out.println("_________________Printing Response Status Line________________");
@@ -33,6 +34,7 @@ public class LoggingResponseValues extends TestBase {
                 status().
                 statusCode(200);
     }
+
     @Test
     public void test003() {
         System.out.println("_________________Printing Response Body________________");
@@ -46,6 +48,7 @@ public class LoggingResponseValues extends TestBase {
                 body().
                 statusCode(200);
     }
+
     @Test
     public void test004() {
         System.out.println("_________________Printing Response Body if error________________");
